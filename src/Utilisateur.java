@@ -1,10 +1,10 @@
-import java.util.List;
-
 public class Utilisateur extends  Personne{
 
     String email;
     String motdepasse;
     Role role;
+
+
 
     public String getEmail() {
         return email;
@@ -30,20 +30,22 @@ public class Utilisateur extends  Personne{
         this.role = role;
     }
 
-    public Utilisateur(String nom, int age , String email , String motdepasse) {
+    public Utilisateur(String nom, int age , String email , String motdepasse , Role rolename) {
         super(nom, age);
         this.email=email;
         this.motdepasse=motdepasse;
+        this.role=rolename;
+
     }
 
     @Override
     public String toString() {
         return "Utilisateur{" +
-                "nom=" +nom+
-                "age = " +age+
-                "role=" + role +
-                ", motdepasse='" + motdepasse + '\'' +
-                ", email='" + email + '\'' +
+                " nom= " + nom +
+                " age = " + age +
+                " role= " + role +
+                " , motdepasse = ' " + motdepasse + '\'' +
+                " , email='" + email + '\'' +
                 '}';
     }
 }
